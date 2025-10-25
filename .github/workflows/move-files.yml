@@ -1,0 +1,30 @@
+name: Move Files to Root
+
+on:
+  workflow_dispatch:
+
+jobs:
+  move-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Move files from subfolder to root
+        run: |
+          # Move all files from Portfolio-Website-Template-main to root
+          mv Portfolio-Website-Template-main/* .
+          mv Portfolio-Website-Template-main/.* . 2>/dev/null || true
+          # Remove the now-empty subfolder
+          rm -rf Portfolio-Website-Template-main
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Add all changes
+          git add -A
+          # Commit changes
+          git commit -m "Move portfolio files to root directory for GitHub Pages"
+          # Push changes
+          git push
