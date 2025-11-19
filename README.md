@@ -1,5 +1,10 @@
 # Portfolio Website
 
+## About
+
+Welcome to my portfolio website! This platform serves as a comprehensive showcase of my professional journey, technical skills, and creative projects. Built with passion and attention to detail, this website reflects my commitment to clean code, modern design principles, and user-centric development.
+
+As a dedicated developer, I believe in creating digital experiences that are not only visually appealing but also functional and accessible. This portfolio demonstrates my proficiency in web technologies and my ability to transform ideas into reality through code.
 ## Overview
 This is a personal portfolio website showcasing projects, skills, and professional experience. The website is designed with a modern, responsive layout to provide an engaging user experience across all devices.
 
